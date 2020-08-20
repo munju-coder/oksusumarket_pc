@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옥수수마켓</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--bootstrap-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../oksusumarket_pc/css/grid.css">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--goolge webfont-->
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="../oksusumarket_pc/css/swiper.min.css">
+    <script src="../oksusumarket_pc/js/swiper.js"></script>
+    <!--js-->
+    <script src="../oksusumarket_pc/js/common.js"></script>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../oksusumarket_pc/css/main.css"> 
+    <link rel="stylesheet" href="../oksusumarket_pc/css/grid.css">
+    <link rel="stylesheet" href="../oksusumarket_pc/css/reset.css">
+
+</head>
+
+<script>
+    $(document).ready( function(){
+        //main_banner slide
+        var mainswiper = new Swiper('.main-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+            effect: 'fade',
+            
+        });
+    });
+</script>
+
+
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--contents {-->
+        <div class="contents">
+            <!--header {-->
+            <header class="dw_1200px over_hidden"> 
+                <div class="over_hidden header_wrap">
+                    <a class="float_left oksusu_logo" href="#"><img src="../oksusumarket_pc/images/oksusu_logo.png" alt="oksusumarket_logo"></a>
+                
+                    <div class="float_left mt10px input_box">
+                        <input type="text" class="float_left">
+                        <a href="javascript:;" class="float_right"><img src="../oksusumarket_pc/images/search_icon.png" alt="header search_icon"></a>
+                    </div>
+    
+                    <a class="float_left mt10px t_center google_search t_center" href="#"><img src="../oksusumarket_pc/images/Google Play.png" alt="Google Play logo"></a>
+    
+                    <a class="float_right mt20px header_join" href="#">회원가입</a>
+                    <a class="float_right mt20px t_right header_login" href="#">옥수수마켓 로그인</a>
+                </div>
+                
+            </header>
+            <!--} header-->
+
+            <!--main_slide {-->
+            <section class="slideArea main-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="w100" src="../oksusumarket_pc/images/web_banner1.png" alt="web_banner1"></div>
+                    <div class="swiper-slide"><img class="w100" src="http://placehold.it/1903x757/222222/ffffff?text=web_banner2" alt="web_banner2"></div>
+                </div>
+            </section>
+            <!--} main_slide-->
+            <style>
+                body {font-family: 'Noto Sans KR', sans-serif;}
+                /*common*/
+                input { outline: none; }
+                .dw_1200px { width: 100%; max-width: 1200px; margin: 0 auto; }
+                .oksusu_bg { background-color: #ff5055; }
+                .oksusu_gray { background-color: #ededed; }
+                .oksusu_f_color { color: #ff5055; }
+                .over_hidden { overflow: hidden; }
+                .fw_bold { font-weight: 600; }
+                .t_center { text-align: center; }
+                .t_left { text-align: left; }
+                .t_right { text-align: right; }
+                .col-sm-4 { padding-right: 0; padding-left: 0; }
+
+                .f22 { font-size: 22px; }
+                .f24 { font-size: 24px; }
+                .f18 { font-size: 18px; }
+            
+                .float_left { float: left; }
+                .float_right { float: right; }
+                
+                .mt15px { margin-top: 15px; }
+                .mt10px { margin-top: 10px; }
+                .mt20px { margin-top: 20px; }
+                .mb30px { margin-bottom: 30px; }
+                .mb10px { margin-bottom: 10px; }
+                .mb15px { margin-bottom: 15px; }
+                .mb20px { margin-bottom: 20px; }
+                .mb60px { margin-bottom: 60px; }
+                .ml10px { margin-left: 10px; }
+                .mr10px { margin-right: 10px; }
+                .w20 { width: 20%; }
+                .w100 { width: 100%; }
+                .pb3px { padding-bottom: 3px; }
+
+                .wrap .contents header > div { margin: 30px 0; }
+                .wrap .contents header .header_wrap a.oksusu_logo { width: 17%; }
+                .wrap .contents header .header_wrap div.input_box { width: 45%; position: relative; background-color: #f1f1f5; border-radius: 15px; margin-right: 5px; }
+                .wrap .contents header .header_wrap div.input_box input { width: 95%; border: none; padding: 10px 0; border-radius: 15px; background-color: #f1f1f5; }
+                .wrap .contents header .header_wrap div.input_box a { position: absolute; display: inline-block; right: 0; margin-right: 10px; margin-top: 8px; }
+                .wrap .contents header .header_wrap a.google_search { width: 15%; background-color: #f1f1f5; padding: 10px 0; margin-left: 10px; border-radius: 15px; }
+                .wrap .contents header .header_wrap a.header_login { width: 14%; margin-right: 30px; }
+                
+                .wrap .contents .slideArea .swiper-wraper .swiper-slide-active img { width: 100%; }
+            
+                .wrap .contents section.tabArea { margin-top: 60px; margin-bottom: 30px; }
+                .wrap .contents section.tabArea .tab_list { width: 1161px; text-align: center; }
+                .wrap .contents section.tabArea .tab_list .tablinks 
+                {  position: relative; float: left; width: 33.3%; padding-top: 12px; padding-bottom: 11px; padding-bottom: 13px; border-right: 1px solid #d2d2d2; cursor: pointer; background-color: #ededed; }
+                .wrap .contents section.tabArea .tab_list .tablinks .tabIcon { margin-left: 130px; }
+                .wrap .contents section.tabArea .tab_list .tablinks .tabIcon img { float: left; }
+                .wrap .contents section.tabArea .tab_list .tablinks:last-child .tabIcon { margin-left: 120px; }
+                .wrap .contents section.tabArea .tab_list .tablinks .tabIcon img:last-child { display: none; }
+                .wrap .contents section.tabArea .tab_list .tablinks .tabIcon::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap .contents section.tabArea .tab_list .tablinks span { position: absolute; top: 20px; right: 150px; }
+                .wrap .contents section.tabArea .tab_list .tablinks:last-child span { right: 125px; }
+                .wrap .contents section.tabArea .tab_list .tablinks:last-child { border-right: none; }
+                .wrap .contents section.tabArea .tab_list .tablinks::after { content: ''; width: 100px; background-color: red; }
+                .wrap .contents section.tabArea .tab_list::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap .contents section.tabArea .tab_list .tabliks .tabIcon img:last-of-type { display: none; }
+                .wrap .contents section.tabArea .tab_list .tablinks/* :not(.bg_active)  */{ border-bottom: 2px solid #ff5055; }
+                
+                .wrap .contents section.introArea { background-color: #eeeeee; padding-top: 30px; padding-bottom: 70px; }
+                .wrap .contents section.introArea .it_middle { margin-bottom: 45px; }
+                .wrap .contents section.introArea .it_bottom ul li:first-child { margin-bottom: 50px; }
+
+                .wrap footer .ft_top { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px 0; }
+                .wrap footer .ft_top a { margin-right: 30px; }
+                .wrap footer .ft_middle .ftm_wrap { margin: 30px auto; }
+                .wrap footer .ft_middle .ftm_wrap .ftm_left { float: left; }
+                .wrap footer .ft_middle .ftm_wrap .ftm_right { float: right; }
+                .wrap footer .ft_middle .ftm_wrap::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap footer .ft_middle .ftm_wrap .ftm_right ul li { float: left; }
+                .wrap footer .ft_middle .ftm_wrap .ftm_right ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+                
+                .tab_contents { display: none; } 
+                .tab_active { display: block; }
+                .wrap .contents section.tabArea .tab_list .tablinks.bg_active { background-color: #ff5055;  border-right: none; transition: .3s;  }
+                .wrap .contents section.tabArea .tab_list .tablinks.bg_active img:last-of-type { display: inline-block; }
+                .wrap .contents section.tabArea .tab_list .tablinks.bg_active img:first-of-type { display: none; }
+                .wrap .contents section.tabArea .tab_list .tablinks.bg_active span { color: white; }
+                .wrap .contents section.tabArea .tab_contents ul li:nth-child(3) a,.wrap .contents section.tabArea .tab_contents ul li:last-child a { color: #ff5055; }
+
+            </style>
+
+            <script>
+                $(document).ready( function(){
+                    $('.tablinks').each( function(){
+                        $(this).click( function(){
+                            $('.tablinks').removeClass('bg_active');
+                            $(this).addClass('bg_active');
+
+                            $('.tab_contents').removeClass('tab_active');
+                            $('.tab_contents').css('display','none');
+
+                            var chk = $(this).attr("tab_name");
+                            $('#' + chk).css("display", "block");
+                        });
+                    }); 
+                });
+            </script>
+
+
+            <section class="tabArea dw_1200px">
+                <div class="tab_list mb30px">
+                    <div class="tablinks t_center bg_active" tab_name="tab1">
+                        <div class="tabIcon">
+                            <img src="../oksusumarket_pc/images/../images/cart_icon.png" alt="cart_icon">
+                            <img src="../oksusumarket_pc/images/../images/w_cart_icon.png" alt="white_cart_icon">
+                        </div>
+                        
+                        <span class="oksusu_f_color fw_bold">사고싶고</span>
+                    </div>
+
+                    <div class="tablinks t_center" tab_name="tab2">
+                        <div class="tabIcon">
+                            <img src="../oksusumarket_pc/images/sell_icon2.png" alt="sell_icon">
+                            <img src="../oksusumarket_pc/images/w_sell_icon2.png" alt="white_sell_icon"> 
+                        </div>
+                        
+                        <span class="oksusu_f_color fw_bold">팔고싶은</span>
+                    </div>
+
+                    <div class="tablinks t_center" tab_name="tab3">
+                        <div class="tabIcon">
+                            <img class="pb3px" src="../oksusumarket_pc/images/location_icon.png" alt="location_icon">
+                            <img class="pb3px" src="../oksusumarket_pc/images/w_location_icon.png" alt="white_location_icon"> 
+                        </div>
+                        
+                        <span class="oksusu_f_color fw_bold">우리동네 상품</span>
+                    </div>
+                </div> 
+
+                <div class="tab_contents over_hidden tab_active" id="tab1">
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li><a href="#"><img src="../oksusumarket_pc/images/product_images3.png" alt="product_images3"></a></li>
+                    </ul>
+                </div>
+
+                <div class="tab_contents over_hidden" id="tab2">
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">800,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li><a href="#"><img src="../oksusumarket_pc/images/product_images3.png" alt="product_images3"></a></li>
+                    </ul>
+                </div>
+
+                <div class="tab_contents over_hidden" id="tab3">
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">900,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images1"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="mb60px fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images1.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li class="mb20px"><a href="#"><img src="../oksusumarket_pc/images/product_images2.png" alt="product_images2"></a></li>
+                        <li class="mb10px"><a href="#">[아티스티나] 폴란드 수입 그릇세트</a></li>
+                        <li class="mb15px oksusu_f_color fw_bold"><a href="#">700,000</a>원</li>
+                        <li class="fw_bold"><a href="#">판매완료</a></li>
+                    </ul>
+
+                    <ul class="col-sm-4 mb30px">
+                        <li><a href="#"><img src="../oksusumarket_pc/images/product_images3.png" alt="product_images3"></a></li>
+                    </ul>
+                </div>
+            </section> 
+
+            <section class="introArea over_hidden">
+                <div class="dw_1200px introArea_wrap">
+                    <div class="it_top t_center mb20px">
+                        <img src="../oksusumarket_pc/images/drop_icon.png" alt="drop_icon">
+                    </div>
+                    
+                    <div class="it_middle t_center">
+                        <h2 class="f24 mb30px">옥수수마켓의 특별함</h2>
+                        <h2 class="f22 sub_text oksusu_f_color fw_bold mb20px">중고거래 어디서 하시나요?</h2>
+                        <p class="f18">옥수수마켓은 회원등급에 따라 중고 &amp; 기타상품을 모바일로 안전하고 간편하게 거래하는 어플리케이션입니다.</p>
+                    </div>
+                    
+                    <div class="it_bottom">
+                        <ul class="col-sm-3 t_center">
+                            <li><img src="../oksusumarket_pc/images/white_circle_1.png" alt="white_circle1"></li>
+                            <li class="mb10px">(주)온오프코리아만의 특화된</li>
+                            <li class="mb10px">결제 서비스로 사기 걱정 없는</li>
+                            <li class="fw_bold">안전한 중고거래</li>
+                        </ul>
+    
+                        <ul class="col-sm-3 t_center">
+                            <li><img src="../oksusumarket_pc/images/white_circle_1.png" alt="white_circle1"></li>
+                            <li class="mb10px">일반인 뿐만 아니라</li>
+                            <li class="mb10px">셀럽의 중고제품 판매 및</li>
+                            <li class="fw_bold">재능까지 사고파는 마켓</li>
+                        </ul>
+    
+                        <ul class="col-sm-3 t_center">
+                            <li class="mb10px"><img src="../oksusumarket_pc/images/white_circle_1.png" alt="white_circle1"></li>
+                            <li class="mb10px">신용카드, 가상계좌 등</li>
+                            <li class="fw_bold">모든 결제수단 지원</li>
+                        </ul>
+    
+                        <ul class="col-sm-3 t_center">
+                            <li><img src="../oksusumarket_pc/images/white_circle_1.png" alt="white_circle1"></li>
+                            <li class="mb10px">판매자 유료 수수료 서비스로</li>
+                            <li class="mb10px">안심하고 구매할 수 있는</li>
+                            <li class="fw_bold">모바일 플리마켓</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="infoArea">
+                <a href="#"><img class="w100" src="../oksusumarket_pc/images/oksusu_service.png" alt="oksusu_service banner"></a>
+            </section>
+
+            <section class="reviewArea dw_1200px">
+                <a href="#"><img src="../oksusumarket_pc/images/oksusu_review.png" alt="oksusu_review"></a>
+            </section>
+
+            <footer>
+                <div class="ft_top">
+                    <div class="dw_1200px ftt_wrap">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보취급방침</a>
+                        <a href="#">전자금융거래기본약관</a>
+                        <a href="#">공지사항</a>
+                        <a href="#"><span class="oksusu_f_color">옥수수마켓이용안내</span></a> 
+                    </div>
+                </div>
+
+                <div class="ft_middle">
+                    <div class="ftm_wrap dw_1200px">
+                        <div class="ftm_left t_left">
+                            <ul class="t_center">
+                                <li class="mb10px">옥수수마켓 고객센터</li>
+                                <li class=""><span class="f22 fw_bold">1600.8952</span></li>
+                            </ul>
+                        </div>
+    
+                        <div class="ftm_right w80">
+                            <ul>
+                                <li><strong>(주)이엔지플러스</strong>대표이사 전수현</li>
+                                <li>사업자등록번호 785-87-00121</li>
+                                <li>경기도 광명시 일직로22, 1331호 (일직동, 광명역 효성 해링텅타워 The First</li>
+                            </ul>
+    
+                            <div class="ftmr_bottom mt10px">© Engplus Co., Ltd.</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
+        <!--} contents-->
+        
+
+    </div>
+    <!--} wrap-->    
+</body>
+</html>
