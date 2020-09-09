@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옥수수마켓</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--bootstrap-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/grid.css">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--goolge webfont-->
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/swiper.js"></script>
+    <!--js-->
+    <script src="../js/common.js"></script>
+    <!-- <script src="../js/index.js"></script> -->
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--header {-->
+        <header class="over_hidden"> 
+            <div class="over_hidden header_wrap dw_1200px">
+                <a class="float_left oksusu_logo" href="../index.html"><img src="../images/oksusu_logo.png" alt="oksusumarket_logo"></a>
+            
+                <div class="float_left mt10px input_box">
+                    <input type="text" class="float_left">
+                    <a href="javascript:;" class="float_right"><img src="../images/search_icon.png" alt="header search_icon"></a>
+                </div>
+
+                <a class="float_left mt10px t_center google_search t_center" href="https://play.google.com/store/apps/details?id=com.yw_oksusumarket.oksusumarket"><img src="../images/Google Play.png" alt="Google Play logo"></a>
+
+                <a class="float_right mt20px header_join" href="#">회원가입</a>
+                <a class="float_right mt20px t_right header_login" href="#">옥수수마켓 로그인</a>
+            </div>
+            
+        </header>
+        <!--} header-->
+
+        <style>
+            /*info_list */  
+            header { box-shadow: 0 0 10px #ddd; }
+            .wrap .board_list { height: 60vh; margin-top: 10vh; }
+            .wrap .info_list i { margin-left: 1%; }
+            .wrap .info_list .if_top { margin-bottom: 20px; font-size: 20px; }
+            .wrap .info_list .if_top ul { width: 35%; margin: 0 auto; overflow: hidden;  }
+            .wrap .info_list .if_top ul li { float: left; width: 50%; text-align: center; font-size: 20px; }
+            .wrap .info_list table { width: 100%;  }
+            .wrap .info_list .if_top ul li a:hover { color: #686868; }
+            .wrap .info_list table th { font-size: 18px; color: #000; }
+            .wrap .info_list tr { border-bottom: 1px solid #ddd; }
+            .wrap .info_list tr > th { border-bottom: 1px solid #dddddd; border-top: 1px solid #4e575e; }
+            .wrap .info_list table tr:first-child th { padding: 15px 0; }
+            .wrap .info_list table th, td { padding: 12px 0; color:#333; font-size: 13px; }
+            .wrap .info_list .bg_g td, .wrap .contents .info_list .bg_w td { border-bottom: 1px solid #dddddd; }
+            .wrap .info_list .bg_g .txt_l i ,.wrap .contents .info_list .bg_w td i { color: #585757; }
+            .p_paging { margin-top: 10vh; }
+            .p_paging a {
+                display: inline-block;
+                padding: 0 10px;
+                height: 30px;
+                font-size: 13px;
+                color: #a6a6a6;
+                font-family: 'Verdana';
+                line-height: 28px;
+                border: 1px solid #e9e9e9;
+            }
+            .p_paging a:hover, .p_paging a.now, .p_paging .now { color: #2a2a2a; border-color: #222; }
+            .inquery_txt a { display: inline-block; padding: 7px; font-size: 12px; background-color: #9e9e9e; color: white; }
+
+            .modal_inquery_box {
+                display: none;
+                position: fixed;
+                background-color: white;
+                z-index: 100;
+                width: 700px;
+                height: 700px;
+                top: 10%;
+                left: 32%;
+                border: 3px solid #f9bc55;
+            }
+
+            .modal_inquery_background {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(0 0 0 / 27%);
+                z-index: 10;
+            }
+
+        </style>
+
+        <script>
+            $(document).ready( function(){
+                //info_write toggle event
+                $('.inquery_txt,.modal_inquery_background,.inquery_close').click( function(){
+                    // console.log('a');
+                    $(".modal_inquery_background").toggle();
+                    $(".modal_inquery_box").toggle();
+                    
+                });
+            });
+        </script>
+
+        <style>
+            /*iquery_list(문의사항)*/
+            .outline_none { outline: none; }
+            .board_contents_wrap .board_contents .board_middle .bm_top > div { float: left; }
+            .board_contents_wrap .board_contents .board_middle .bm_top::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .board_contents_wrap .board_contents .board_middle { border-top: 1px solid #333; margin-bottom: 20px; }
+            .board_contents_wrap .board_contents .board_middle .bm_top { border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+            .board_contents_wrap .board_contents .board_middle .main_subject { border-bottom: 1px solid #ddd; padding-bottom: 15px; margin-top: 15px; }
+            .board_contents_wrap .board_contents .board_middle .sub_subject .new_sticker { border: 1px solid #f51b80; font-size:12px; background-color: #f51b80; padding: 2px 4px 6px 4px; color: white; border-radius: 10px; }
+            .board_contents_wrap .board_contents .inquery_btn { margin-bottom: 20vh; }
+            .board_contents_wrap .board_contents .inquery_btn a { display: inline-block; padding: 10px; background-color: #ded9d9; color: 565656; font-size: 13px; }
+            
+            .inquery_close i { position: absolute; left: 700px; font-size: 30px; color: #f9bc55; }
+            
+            .modal_inquery_box .inquery_top { margin: 40px 0; }
+            .iq_write_form .iq_write p { float: left; width: 20%; text-align: right; }
+            .iq_write_form .iq_write div { float: right; width: 75%; text-align: left; }
+            .iq_write_form .iq_write::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .iq_write_form .iq_write_btn button { border: 1px solid #ddd; padding: 10px 40px; font-size: 15px; }
+            
+        </style>
+
+        <div class="board_list">
+            <!--modal_inquery {-->
+            <div class="modal_inquery_background"></div>
+            <div class="modal_inquery_box">
+                <a href="javascript:;" class="inquery_close"><i class="far fa-times-circle t_right"></i></a>
+                <div class="inquery_top fw_600 t_center mb40px">
+                    <h2 class="f24 mb30px">옥수수 마켓에 문의하기</h2>
+                    <p class="mb10px word_break">궁금한 점을 문의해 주세요.</p>
+                    <p class="mb10px word_break">담당자가 메일을 통해 친절하게 답변해드립니다.</p>
+                </div>
+
+                <!--iq_write_form {-->
+                <form class = "iq_write_form">
+                    <input type="hidden" name="mb_id" value = "">
+                    <fieldset>
+                        <div class="iq_write t_center mb20px">
+                            <p class="p_color mb10px">성명</p>
+                            <div class="m10px">
+                                <input type="text" name = "app_no" class="outline_none" placeholder="성명">
+                            </div>
+                        </div>
+                        
+                        <div class="iq_write t_center mb20px iq_write_number">
+                            <p class="mb10px">연락처</p>
+                            <div class="">
+                                <select name="" id="" class="w20">
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>
+            
+                                <span class="">-</span>
+                                <span class="">
+                                    <input type="text" name="mb_tel_1" id="mb_tel_1" class="w20" value="" maxlength="4">
+                                </span>
+                                <span class="">-</span>
+                                <span class="">
+                                    <input type="text" name="mb_tel_2" id="mb_tel_2" class="w20" value="" maxlength="4">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="iq_write t_center mb20px iq_write_email">
+                            <p class="om_title">이메일</p>
+                            <div class="">
+                                <span class="">
+                                    <input type="text" name="mb_email" id="mb_email" class="w30" value="" maxlength="100">
+                                </span>
+                                <span class="">@</span>
+
+                                <input type="text" name="mb_email02" id="mb_email02"  class="w30" value="naver.com">
+                            </div>
+                        </div>
+                        
+                        <div class="iq_write t_center mb20px iq_write_textarea">
+                            <p class="p_color mb10px">제목</p>
+                            <div class="m10px">
+                                <input type="text" name = "app_dt" class="outline_none w90" placeholder="ex)문의드립니다">
+                            </div>
+                        </div>
+
+                        <div class="iq_write t_center mb30px iq_write_textara">
+                            <p class="p_color mb10px">문의내용</p>
+                            <div class="m10px">
+                                <textarea name="" class="w90" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="iq_write_btn t_center">
+                            <div>
+                                <button class="outline_none" href="#">등록</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!--} iq_write_form-->
+            </div>
+            <!--} modal_inquery-->
+
+            <!--info_list {-->
+            <div class="info_list dw_1200px mb5per">
+                <div class="if_top t_center">공지사항</div>
+
+                <div class="t_right mb10px inquery_txt">
+                    <a href="javascript:;">문의사항</a>
+                </div>
+
+                <div class="if_middle">
+                    <table>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col width="15%" class="td_none">
+                            <col width="10%">
+                        </colgroup>
+            
+                        <tbody>
+                            <tr>
+                                <th class="t_center">번호</th>
+                                <th class="t_center">제목</th>
+                                <th class="td_none t_center">날짜</th>
+                                <th class="t_center">작성자</th>
+                            </tr>
+            
+                            <tr class="">
+                                <td class="t_center txt_c seq">4</td>
+                                <td class="t_left"><a href="../board/info_view.html"><img src="../images/info_list.gif" alt="info_badge"> 2020년 8월 베스트 포토 리뷰왕 당첨자 발표 <img src="../images/info_new.gif" alt="info_new"></a></td>
+                                <td class="t_center txt_l td_none">0000-00-00</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+            
+                            <tr class="">
+                                <td class="t_center txt_c seq">3</td>
+                                <td class="t_left"><a href="../board/info_view.html"><img src="../images/info_list.gif"> 공지사항 테스트입니다.</a></td>
+                                <td class="t_center txt_l td_none">2020-01-15</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="t_center txt_c seq">2</td>
+                                <td class="t_left"><a href="../board/info_view.html"><img src="../images/info_list.gif"> 공지사항 테스트입니다.</a></td>
+                                <td class="t_center txt_l td_none">2020-01-15</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="t_center txt_c seq">1</td>
+                                <td class="t_left"><a href="../board/info_view.html"><img src="../images/info_list.gif"> 공지사항 테스트입니다.</a></td>
+                                <td class="t_center txt_l td_none">2020-01-15</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--} info_list-->
+
+            <!--p_paging {-->
+            <div class="p_paging t_center">
+                <div class="pp_wrap">
+                    <a href=""><i class="fas fa-angle-left"></i></a>
+                    <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    <a class="now" href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">7</a>
+                    <a href="">8</a>
+                    <a href="">9</a>
+                    <a class="tw_num" href="">10</a>
+                    <a href=""><i class="fas fa-angle-right"></i></a>
+                    <a href=""><i class="fas fa-angle-double-right"></i></a>
+                </div>
+            </div>
+            <!--} p_paging-->
+        </div>
+            
+        <!--footer {-->
+        <footer>
+            <div class="ft_top">
+                <div class="dw_1200px ftt_wrap">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보취급방침</a>
+                    <a href="#">전자금융거래기본약관</a>
+                    <a href="#">공지사항</a>
+                    <a href="#"><span class="oksusu_f_color">옥수수마켓이용안내</span></a> 
+                </div>
+            </div>
+
+            <div class="ft_middle">
+                <div class="ftm_wrap dw_1200px">
+                    <div class="ftm_left t_left">
+                        <ul class="t_center">
+                            <li class="mb10px">옥수수마켓 고객센터</li>
+                            <li class=""><span class="f22 fw_bold">1600.8952</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="ftm_right w80">
+                        <ul>
+                            <li><strong>(주)이엔지플러스</strong>대표이사 전수현</li>
+                            <li>사업자등록번호 785-87-00121</li>
+                            <li>경기도 광명시 일직로22, 1331호 (일직동, 광명역 효성 해링텅타워 The First</li>
+                        </ul>
+
+                        <div class="ftmr_bottom mt10px">© Engplus Co., Ltd.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->    
+</body>
+</html>

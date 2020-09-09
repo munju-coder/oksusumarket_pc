@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옥수수마켓</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--bootstrap-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/grid.css">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--goolge webfont-->
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/swiper.js"></script>
+    <!--js-->
+    <script src="../js/common.js"></script>
+    <!-- <script src="../js/index.js"></script> -->
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--header {-->
+        <header class="over_hidden"> 
+            <div class="over_hidden header_wrap dw_1200px">
+                <a class="float_left oksusu_logo" href="../index.html"><img src="../images/oksusu_logo.png" alt="oksusumarket_logo"></a>
+            
+                <div class="float_left mt10px input_box">
+                    <input type="text" class="float_left">
+                    <a href="javascript:;" class="float_right"><img src="../images/search_icon.png" alt="header search_icon"></a>
+                </div>
+
+                <a class="float_left mt10px t_center google_search t_center" href="https://play.google.com/store/apps/details?id=com.yw_oksusumarket.oksusumarket"><img src="../images/Google Play.png" alt="Google Play logo"></a>
+
+                <a class="float_right mt20px header_join" href="../member/register.html">회원가입</a>
+                <a class="float_right mt20px t_right header_login" href="../member/register.html">옥수수마켓 로그인</a>
+            </div>
+        </header>
+        <!--} header-->
+
+        <aside id="aside_top_btn">
+            <a href="javascript:;"><img src="../images/top_btn.png" alt="top_btn"></a>
+        </aside>
+        
+        <style>
+            /*product_view*/
+            header { box-shadow: 0 0 10px #ddd; }
+            .f13 { font-size: 13px; }
+            .f18 { font-size: 18px; }
+            /*view_contents*/
+            .vc_top { margin-top: 40px; }
+            .vc_top img:not(.member_img){ width: 600px; border-radius: 8px; margin-bottom: 20px; }
+            .member_img { border-radius: 50px; width: 40px; height: 40px; }
+
+
+        </style>
+
+        <!--contents {-->
+        <div class="view_contents over_hidden">
+            <section class="vc_top dw_1200px t_center">
+                <div class="vct_top">
+                    <img src="../images/product_images1.png" alt="product_images1">
+                </div>
+            </section>
+
+            <style>
+                .view_contents .vc_middle { width: 100%; max-width: 600px; margin: 0 auto; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+                .view_contents .vc_middle .vcm_top { float: left; width: 10%; }
+                .view_contents .vc_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .view_contents .vc_middle .vcm_middle { float: left; margin-top: 5px; }
+                .view_contents .vc_middle .vcm_middle li { margin-bottom: 8px; font-size: 12px; }
+                .vcm_bottom { margin: 30px auto; }
+                .vcm_bottom li p { font-size: 12px; color: #9c9c9c; }
+                .vc_bottom ul li img { border-radius: 8px; }
+                .view_contents .vc_bottom { width: 100%; max-width: 600px; margin: 30px auto; }
+                /* .col-sm-4 { padding-left: 0; padding-right: 0; } */
+
+            </style>
+
+            <section class="vc_middle">
+                <div class="vcm_top over_hidden">
+                    <img class="member_img" src="../images/member_img.png" alt="member_img">
+                </div>
+
+                <ul class="vcm_middle">
+                  <li id="nickname" class="fw_bold">꽃빵</li>
+                  <li id="region_name">광명시 하안동</li>
+                </ul>
+            </section>
+
+            <section class="dw_1200px vc_middle"> 
+                <ul class="vcm_bottom over_hidden">
+                    <li class="mb10px f18 fw_bold">[아티스티나] 폴란드 수입 그릇세트</li>
+                    <li class="mb10px"><p>생활용품</p></li>
+                    <li class="mb10px"><div class="pb_cost fw_bold mb10px oksusu_f_color">25,000 원</div></li>
+                    <li><div class="pb_point f13">등록일: <span>2020-09-09</span></div></li>
+                </ul>
+            </section>
+            
+            <style>
+                .vc_bottom .vcb_top h3 { float: left; } 
+                .vc_bottom .vcb_top::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .vc_bottom .vcb_top p { float: right; cursor: pointer;  }
+            </style>
+            <section class="vc_bottom over_hidden">
+                <div class="vcb_top">
+                    <h3 class="fw_bold f18 oksusu_f_color mb20px">옥수수마켓 인기중고</h3>
+                    <p class="f13">더구경하기</p>
+                </div>
+                
+                <ul>
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+
+                    <li class="col-sm-4 mb30px">
+                        <div class="pbl_img mb20px">
+                            <a href="#"><img class="w100" src="../images/product_images1.png" alt="product_images1"></a>
+                        </div>
+
+                        <div class="pb_subject mb10px text_hidden">
+                            <a href="#">[아티스티나] 폴란드 수입 그릇세트</a>
+                        </div>
+                        
+                        <div class="pb_cost fw_bold mb10px">25,000 원</div>
+                        <div class="pb_point f13">등록일: <span>2020-09-09</span></div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <div class="ft_top">
+                <div class="dw_1200px ftt_wrap">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보취급방침</a>
+                    <a href="#">전자금융거래기본약관</a>
+                    <a href="#">공지사항</a>
+                    <a href="#"><span class="oksusu_f_color">옥수수마켓이용안내</span></a> 
+                </div>
+            </div>
+
+            <div class="ft_middle">
+                <div class="ftm_wrap dw_1200px">
+                    <div class="ftm_left t_left">
+                        <ul class="t_center">
+                            <li class="mb10px">옥수수마켓 고객센터</li>
+                            <li class=""><span class="f22 fw_bold">1600.8952</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="ftm_right w80">
+                        <ul>
+                            <li><strong>(주)이엔지플러스</strong>대표이사 전수현</li>
+                            <li>사업자등록번호 785-87-00121</li>
+                            <li>경기도 광명시 일직로22, 1331호 (일직동, 광명역 효성 해링텅타워 The First</li>
+                        </ul>
+
+                        <div class="ftmr_bottom mt10px">© Engplus Co., Ltd.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->    
+</body>
+</html>
